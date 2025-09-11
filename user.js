@@ -1,3 +1,8 @@
+// NOTE:
+// removing user.js doesn't revert the config
+// updating config while user.js in root, will get overwritten by the user.js after every firefox reboot
+//
+
 //
 /* You may copy+paste this file and use it as it is.
  *
