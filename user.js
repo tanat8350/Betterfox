@@ -268,8 +268,9 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 //
 // PREF: hide site shortcut thumbnails on New Tab page
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-// PREF: hide weather on New Tab page
-user_pref("browser.newtabpage.activity-stream.showWeather", true);
+// PREF: hide weather on New Tab pages
+// somehow even after enabled, weather widget doesn't come back
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
 // PREF: hide dropdown suggestions when clicking on the address bar
 user_pref("browser.urlbar.suggest.topsites", true);
 
