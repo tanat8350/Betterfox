@@ -218,7 +218,14 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+/** AI ***/
+user_pref("browser.ml.enable", true);
+user_pref("browser.ml.chat.enabled", true);
 
+// Location permission: ask
+user_pref("permissions.default.geo", 0);
+// Notification: ask
+user_pref("permissions.default.desktop-notification", 0);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
@@ -232,7 +239,41 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
  * END: BETTERFOX                                                           *
 ****************************************************************************/
 
+// SECTION: For debugging userChrome.css
+//
+user_pref("devtools.chrome.enabled", true);
+user_pref("devtools.debugger.remote-enabled", true);
 
+// SECTION: Extensions
+//
+// Disable signature requirement
+user_pref("xpinstall.signature.required", false);
+// Stylus, to apply css to restricted pages
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
+// SECTION: Password and friends
+//
+// PREF: disable login manager
+user_pref("signon.rememberSignons", false);
+// PREF: disable address and credit card manager
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.creditCards.enabled", false);
 
+// SECTION: Homepage
+//
+// PREF: hide site shortcut thumbnails on New Tab page
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+// PREF: hide weather on New Tab page
+user_pref("browser.newtabpage.activity-stream.showWeather", true);
+// PREF: hide dropdown suggestions when clicking on the address bar
+user_pref("browser.urlbar.suggest.topsites", true);
+
+// SECTION: Desktop only
+//
+// redirect to public wifi login page
+// PREF: disable captive portal detection
+// [WARNING] Do NOT use for mobile devices!
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.connectivity-service.enabled", false);
 
