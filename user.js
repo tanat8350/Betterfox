@@ -251,8 +251,8 @@ user_pref("devtools.debugger.remote-enabled", true);
 
 // SECTION: Extensions
 //
-// Disable signature requirement
-user_pref("xpinstall.signature.required", false);
+// Disable signature requirement (only works in developer edition)
+user_pref("xpinstall.signatures.required", false);
 // Stylus, to apply css to restricted pages
 user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
 
@@ -266,11 +266,17 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 
 // SECTION: Homepage
 //
+// homepage
+user_pref("browser.startup.homepage", "about:blank");
+// new tab page
+user_pref("browser.newtabpage.enabled", false);
 // PREF: hide site shortcut thumbnails on New Tab page
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 // PREF: hide weather on New Tab pages
 // somehow even after enabled, weather widget doesn't come back
 user_pref("browser.newtabpage.activity-stream.showWeather", false);
+
+// SECTION: Url bar
 // PREF: hide dropdown suggestions when clicking on the address bar
 user_pref("browser.urlbar.suggest.topsites", true);
 
