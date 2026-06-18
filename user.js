@@ -17,11 +17,11 @@
  * "Ad meliora"                                                             *
  * version: 144                                                             *
  * url: https://github.com/yokoffing/Betterfox                              *
-****************************************************************************/
+ ****************************************************************************/
 
 /****************************************************************************
  * SECTION: FASTFOX                                                         *
-****************************************************************************/
+ ****************************************************************************/
 /** GENERAL ***/
 user_pref("gfx.content.skia-font-cache-size", 32);
 
@@ -70,7 +70,7 @@ user_pref("network.predictor.enabled", false);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
-****************************************************************************/
+ ****************************************************************************/
 /** TRACKING PROTECTION ***/
 user_pref("browser.contentblocking.category", "strict");
 user_pref("privacy.trackingprotection.allow_list.baseline.enabled", true);
@@ -166,15 +166,21 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
 
 /****************************************************************************
  * SECTION: PESKYFOX                                                        *
-****************************************************************************/
+ ****************************************************************************/
 /** MOZILLA UI ***/
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
+user_pref(
+  "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons",
+  false,
+);
+user_pref(
+  "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features",
+  false,
+);
 user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.aboutwelcome.enabled", false);
@@ -221,7 +227,7 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 
 /****************************************************************************
  * START: MY OVERRIDES                                                      *
-****************************************************************************/
+ ****************************************************************************/
 // visit https://github.com/yokoffing/Betterfox/wiki/Common-Overrides
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
@@ -237,15 +243,13 @@ user_pref("permissions.default.desktop-notification", 0);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
-****************************************************************************/
+ ****************************************************************************/
 // visit https://github.com/yokoffing/Betterfox/blob/main/Smoothfox.js
 // Enter your scrolling overrides below this line:
 
-
-
 /****************************************************************************
  * END: BETTERFOX                                                           *
-****************************************************************************/
+ ****************************************************************************/
 // SECTION: For debugging userChrome.css
 //
 user_pref("devtools.chrome.enabled", true);
@@ -282,6 +286,10 @@ user_pref("browser.newtabpage.activity-stream.showWeather", false);
 // PREF: hide dropdown suggestions when clicking on the address bar
 user_pref("browser.urlbar.suggest.topsites", true);
 
+// SECTION: Scroll bar
+// bring back thick scrollbar
+user_pref("widget.non-native-theme.scrollbar.style", 4);
+
 // SECTION: Desktop only
 //
 // redirect to public wifi login page
@@ -290,3 +298,6 @@ user_pref("browser.urlbar.suggest.topsites", true);
 user_pref("captivedetect.canonicalURL", "");
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.enabled", false);
+
+// SECTION: Fullscreen (when F11)
+user_pref("browser.fullscreen.autohide", false);
